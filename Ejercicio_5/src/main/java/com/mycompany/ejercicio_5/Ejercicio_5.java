@@ -13,6 +13,13 @@ public class Ejercicio_5 {
         System.out.println(pers.datosString());
         */
         //Ejer 6
+        Scanner scanner = new Scanner(System.in);
+        String cadena = scanner.nextLine();
+        if((cadena.charAt(0)) < 'A'){
+            System.out.println("La letra es un numero");
+        }else{
+            System.out.println("Es una letra");
+        }
         
     }
 }
