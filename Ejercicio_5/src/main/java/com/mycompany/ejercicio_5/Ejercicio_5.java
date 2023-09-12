@@ -1,6 +1,7 @@
 package com.mycompany.ejercicio_5;
 import java.util.*;
 import java.time.LocalDate;
+import java.time.Month;
 
 public class Ejercicio_5 {
 
@@ -13,13 +14,7 @@ public class Ejercicio_5 {
         System.out.println(pers.datosString());
         */
         //Ejer 6
-        Scanner scanner = new Scanner(System.in);
-        String cadena = scanner.nextLine();
-        if((cadena.charAt(0)) < 'A'){
-            System.out.println("La letra es un numero");
-        }else{
-            System.out.println("Es una letra");
-        }
-        
+        Vehiculo miauto = new Vehiculo(4, "Rojo", tipo_vehiculo.AUTO, 2003, 2015, "AAA213BB", LocalDate.of(2020, Month.MARCH, 1));
+        System.out.println(miauto.datosString());
     }
 }

@@ -56,6 +56,7 @@ public class Vehiculo {
     }
 
     private String patente_valida(String patente) {
+        //Problema con la flag, nunca cambia a true
         Scanner scanner = new Scanner(System.in);
         int i;
         boolean flag = true, flag2 = true;
@@ -63,18 +64,14 @@ public class Vehiculo {
             switch (patente.length()) {
                 case 6:
                     for (i = 0; i < 3; i++) {
-                        if ((patente.charAt(i) < 'A'))
-                            ;
-                        {
+                        if ((patente.charAt(i) < 'A')){
                             System.out.println("ERROR, PRIMEROS 3 SIN NUMEROS TIENEN QUE SER");
                             flag2 = false;
                             break;
                         }
                     }
                     for (i = 3; i < patente.length(); i++) {
-                        if ((patente.charAt(i) < 'A'))
-                            ;
-                        {
+                        if ((patente.charAt(i) > 'A')){
                             System.out.println("ERROR, ULTIMOS 3 NUMEROS TIENEN QUE SER");
                             flag2 = false;
                             break;
@@ -83,6 +80,7 @@ public class Vehiculo {
                     // Si todo esta bien se rompe el ciclo
                     if (flag2) {
                         flag = false;
+                        break;
                     } else {
                         System.out.println("Ingrese nuevamente la patente");
                         patente = scanner.nextLine();
