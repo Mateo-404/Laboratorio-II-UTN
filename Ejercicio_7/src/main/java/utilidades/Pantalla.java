@@ -13,7 +13,13 @@ public class Pantalla {
         System.out.println(a);
     }
     public static void imprimirMayuscula(String a){
+        String horizontal = "-";
         System.out.println(a.toUpperCase());
+        int i;
+        for(i=0;i<a.length();i++){
+            horizontal = horizontal + "-";
+        }
+        System.out.println(horizontal);
     }
     public static void imprimirMayusculaCuadrito(String a){
         String cadena, horizontal = " --";
