@@ -5,6 +5,7 @@
 package com.mycompany.ejercicio_7;
 import java.util.*;
 import utilidades.Pantalla;
+import utilidades.Teclado;
 
 /**
  *
@@ -13,8 +14,13 @@ import utilidades.Pantalla;
 public class Ejercicio_7 {
 
     public static void main(String[] args) {
+        /*
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ingresa la cadena: ");
         Pantalla.imprimirMayusculaCuadrito(scanner.nextLine());
+        System.out.println("Está entre: ");
+        Teclado.estaEntre('a', 'c', 'w');
+        */
+        Teclado.esDouble("");
     }
 }

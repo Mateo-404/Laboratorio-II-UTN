@@ -14,6 +14,7 @@ public class Teclado {
     }
     //Chatgpt
     // Un método que reciba como parámetro un texto y retorne si el valor ingresado es o no del tipo entero
+    /*
     public static void esEntero(String texto) {
       try {
         // Intenta convertir el texto a un entero usando la clase Integer
@@ -38,6 +39,45 @@ public class Teclado {
           System.out.println("No es Double");
       }
     }
+    */
+    //Yo:
+    public static void esEntero(String a){
+        int i; boolean flag = true;
+        for(i=0; i < a.length(); i++){
+            if(a.charAt(i)>'9'){
+                System.out.println("El String no es un Entero");
+                flag = false;
+                break;
+            }
+            if(a.charAt(i) == '.'){
+                System.out.println("El String no es un Entero");
+                flag = false;
+                break;
+            }   
+        }
+        if(flag){
+            System.out.println("El String es un Entero");
+        }
+    }
+    
+        public static void esDouble(String a){
+        int i; boolean flag = true;
+        for(i=0; i < a.length(); i++){
+            if(a.charAt(i)>'9'){
+                System.out.println("El String no es un Double");
+                flag = false;
+                break;
+            }
+            if(a.charAt(i) == ','){
+                System.out.println("El String no es un Double");
+                flag = false;
+                break;
+            }   
+        }
+        if(flag){
+            System.out.println("El String es un Double");
+        }
+    }
 
     public static void estaEntre(char a, char b, char c){
         int i; boolean flag = true;
@@ -49,7 +89,7 @@ public class Teclado {
             }
         }
         if(flag){
-            System.out.println("La letra" + c + " no está entre las otras letras");
+            System.out.println("La letra " + c + " no está entre " + a + " y " + b);
         }
     }
 }
