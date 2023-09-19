@@ -5,7 +5,7 @@
 package com.mycompany.ejercicio_7;
 import java.util.*;
 import utilidades.Pantalla;
-import utilidades.Teclado;
+import utilidades.*;
 
 /**
  *
