@@ -4,16 +4,13 @@
  */
 package utilidades;
 
-public class Persona {
-    String nombre;
-    int anios;
-
-    public Persona() {
-    }
-
-    public Persona(String nombre, int anios) {
-        this.nombre = nombre;
-        this.anios = anios;
-    }
+/**
+ *
+ * @author Gary
+ */
+enum idiomas{
+    INGLES_ESPANIOL,ESPANIOL_INGLES;
+}
+public class Diccionario {
     
 }

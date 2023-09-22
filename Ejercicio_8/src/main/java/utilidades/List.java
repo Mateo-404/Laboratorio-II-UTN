@@ -4,7 +4,7 @@
  */
 package utilidades;
 import java.util.*;
-import Persona;
+import utilidades.Persona;
 
 /**
  *
@@ -33,23 +33,30 @@ public class List {
     }
     //Ahora con Linkedist, lo voy a hacer con nombre y edad nomás
         public static void recorrerLinkedList(LinkedList<Persona> listita){
-        for (String it : listita){
-            System.out.println(it);
-        }
+            Iterator it = listita.iterator();
+            for(Persona a : listita){
+                System.out.println(a);
+            }
     }
     public static boolean crearlistaLinkedList(String a){
         boolean flag = true;
         Scanner scanner = new Scanner(System.in);
-        LinkedList<Persona> milista = new ArrayList();
+        LinkedList<Persona> milista = new LinkedList();
+        
         do{
             System.out.println("Ingrese el String: \n Escriba 'salir' en caso de que sea necesario");
             a = scanner.nextLine();
             if(!(a.equalsIgnoreCase("salir"))){
-                milista.add(a);
+                System.out.println("Ingrese: Nombre_Edad");
+                String aux = scanner.nextLine();
+                String[] auxx = aux.split("_");
+                int auxxx = Integer.parseInt(auxx[1]);
+                Persona m = new Persona(auxx[0], auxxx);
+                milista.add(m);
             }
         }while(!(a.equalsIgnoreCase("salir")));
         //Recorrer el array
-        recorrer(milista);
+        recorrerLinkedList(milista);
         return flag;
     }
 }

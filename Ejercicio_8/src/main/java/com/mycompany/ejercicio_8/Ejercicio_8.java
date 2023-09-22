@@ -4,6 +4,7 @@
 
 package com.mycompany.ejercicio_8;
 import java.util.*;
+import utilidades.*;
 
 /**
  *
@@ -12,6 +13,7 @@ import java.util.*;
 public class Ejercicio_8 {
 
     public static void main(String[] args) {
+        //Probar TODOS los metodos
         System.out.println("Hello World!");
     }
 }
