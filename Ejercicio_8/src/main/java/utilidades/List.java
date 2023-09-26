@@ -16,8 +16,9 @@ public class List {
             System.out.println(it);
         }
     }
-    public static boolean crearlista(String a){
+    public static boolean crearlista(){
         boolean flag = true;
+        String a;
         Scanner scanner = new Scanner(System.in);
         ArrayList<String> milista = new ArrayList();
         do{
@@ -38,7 +39,8 @@ public class List {
                 System.out.println(a);
             }
     }
-    public static boolean crearlistaLinkedList(String a){
+    public static boolean crearlistaLinkedList(){
+        String a;
         boolean flag = true;
         Scanner scanner = new Scanner(System.in);
         LinkedList<Persona> milista = new LinkedList();

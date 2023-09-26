@@ -5,15 +5,14 @@ import java.util.*;
  * @author Gary
  */
 public class PilaEspecial {
-    ArrayList<String> a;
+    private ArrayList<String> a = new ArrayList<>();
     //Es solo un arrayList
-
-    public PilaEspecial(ArrayList<String> a) {
-        this.a = a;
+    
+    public PilaEspecial() {
     }
     
-    public void apilar(String var){
-        a.add(var);
+    public void apilar(String e){
+        a.add(e);
         System.out.println("String añadido con éxito!");
     }
     
@@ -34,11 +33,16 @@ public class PilaEspecial {
     
     public void desapilarVarios(int var){
         int i;
-        for(i = 0; i < var; i++){
-            System.out.println("Elemento n°" + var + " que contiene" + a.get(i));
-            System.out.println("Removido con éxito!");
-        }
-        System.out.println("Todos los elementos fueron removidos!");
+        if (var > a.size()){
+            System.out.println("Ingrese una cantidad válida!");
+        }else{
+            for(i = 0; i < var; i++){
+                System.out.println("Elemento n°" + var + " que contiene" + a.get(i));
+                a.remove(i);
+                System.out.println("Removido con éxito!");
+            }
+            System.out.println("Todos los elementos fueron removidos!");   
+            }
     }
     
 }
