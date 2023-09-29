@@ -24,6 +24,15 @@ public class Biblioteca {
     public ArrayList<Libro> getLista() {
         return lista;
     }
+
+    public ArrayList<String> getUsuariosconLibros() {
+        return usuariosconLibros;
+    }
+
+    public void setUsuariosconLibros(ArrayList<String> usuariosconLibros) {
+        this.usuariosconLibros = usuariosconLibros;
+    }
+    
     
     
     public void agregarLibro(Libro libro){
@@ -31,8 +40,33 @@ public class Biblioteca {
         System.out.println("Libro agregado con exito!");
     }
     
-    public void buscarLibro(double myid){
-        //Terminar
+    public void buscarLibro(double id){
+        boolean flag = true;
+        for(Libro aux: lista){
+            if(aux.getId()==id){
+                System.out.println("| Libro encontrado |");
+                System.out.println(" Titulo: " + aux.getTitulo() + "\n Autor: " + aux.getAutor() + "\n Año de publicación: " + aux.getAnio() + "\n ID: " + aux.getId());
+                flag = false;
+            }
+        }
+        if(flag){
+            System.out.println("Libro no encontrado :(");
+        }
+    }
+    
+    //Metodo para control
+    public Libro buscarLibro(double myid, boolean m){
+        boolean flag = true;
+        Libro libro = new Libro();
+        for(Libro aux: lista){
+            if(aux.getId()== myid){
+                libro = aux;
+            }
+        }
+        if(flag){
+            System.out.println("Libro no encontrado :(");
+        }
+        return libro;
     }
     public void buscarLibro(String titulo){
         boolean flag = true;
@@ -45,6 +79,15 @@ public class Biblioteca {
         }
         if(flag){
             System.out.println("Libro no encontrado :(");
+        }
+    }
+    
+    public void listarLibros(){
+        int i = 1;
+        for(Libro aux: lista){
+            System.out.println("| LIBRO N° " + i + " |");
+            i++;
+            System.out.println(" Titulo: " + aux.getTitulo() + "\n Autor: " + aux.getAutor() + "\n Año de publicación: " + aux.getAnio() + "\n ID: " + aux.getId());
         }
     }
 }
