@@ -50,6 +50,7 @@ public class Repaso_parcial_1 {
                             biblioteca.buscarLibro(titulo);
                             break;
                     }
+                    break;
                 case "3":
                     System.out.println("| Lista de libros existentes |");
                     biblioteca.listarLibros();
@@ -57,8 +58,24 @@ public class Repaso_parcial_1 {
                 case "4":
                     System.out.println("Igrese el id del libro: ");
                     id = scanner.nextDouble();
-                    // Ingresar metodo estatico
+                    System.out.println(Control.verificarExistencia(id, biblioteca));
                     break;
+                case "5":
+                    System.out.println("Igrese el id del libro a eliminar: ");
+                    id = scanner.nextDouble();
+                    Control.eliminarLibro(id, biblioteca);
+                    break;
+                case "6":
+                    System.out.println("Ingrese el Nombre de la persona: ");
+                    autor = scanner.nextLine();
+                    System.out.println("Ingrese el id del libro: ");
+                    id = scanner.nextDouble();
+                    Control.tomarPrestado(autor, id, biblioteca);
+                    break;
+                default:
+                    if(!(opcion.equalsIgnoreCase("Salir"))){
+                        System.out.println("Opcion incorrecta, vuelva a ingresarla");
+                    }
             }
         }while(!(opcion.equalsIgnoreCase("Salir")));
     }

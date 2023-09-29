@@ -4,13 +4,13 @@ import java.util.*;
 
 public class Control {
     static public boolean verificarExistencia(double id, Biblioteca biblio){
-        boolean flag = true;
+        boolean flag = false;
         ArrayList<Libro> array = new ArrayList<>();
         array = biblio.getLista();
         //No se si tomar el array de Libros desde acá o pedir desde el main el objeto Biblioteca, consultar al profe
         for(Libro aux : array){
             if(aux.getId()==id){
-                flag = false;
+                flag = true;
             }
         }
         if(flag){
@@ -59,6 +59,17 @@ public class Control {
         }else{
             System.out.println("Libro no encontrado :(, no fue posible su eliminación");
         }
+    }
+    
+    public static boolean verificarLongitudId(double id){
+        //Terminar y conectar a la estructura
+        return false;
+    }
+    
+    public static String verificarAutor(String nombre_sucio){
+        //Terminar y conectar a la estructura
+        String a  = "hola";
+        return a;
     }
     
     
