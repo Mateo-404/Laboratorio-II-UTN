@@ -18,7 +18,7 @@ public class Ejercicio_8 {
         String opcion, aux;
         int i;
         do{
-            System.out.println("Ingrese el ejercicio: a) d) \n De ser necesario pulse \"Salir\" ");
+            System.out.println("Ingrese el ejercicio: a) d) e) \n De ser necesario pulse \"Salir\" ");
             opcion = scanner.nextLine();
             switch (opcion){
                 case "a":
@@ -67,7 +67,22 @@ public class Ejercicio_8 {
                     }
                     break;
                 case "e":
-                    //Diccionario
+                    Diccionario diccionario = new Diccionario();
+                    do{
+                        System.out.println("1- Ingresar traducciones 2- Buscar traducciones");
+                        opcion = scanner.nextLine();
+                        switch (opcion){
+                            case "1":
+                                System.out.println("Ingrese la palabra que traducira: ");
+                                aux = scanner.nextLine();
+                                diccionario.aniadir(aux);
+                                break;
+                            case "2":
+                                System.out.println("Ingrese la palabra que desea buscar la traduccion: ");
+                                aux = scanner.nextLine();
+                                diccionario.traducir(aux);
+                        }
+                    }while(!(opcion.equalsIgnoreCase("Salir")));
                 default:
                     if (!(opcion.equalsIgnoreCase("salir"))){
                         System.out.println("Ingrese un valor correcto!");
