@@ -74,7 +74,7 @@ public class Rectangulo extends Figura {
     
     @Override
     public double retornarPerimetro(){
-        return horizontal * 2 + vertical + 2;
+        return ((horizontal * 2) + (vertical * 2));
     }
     @Override
     public double retornarArea(){

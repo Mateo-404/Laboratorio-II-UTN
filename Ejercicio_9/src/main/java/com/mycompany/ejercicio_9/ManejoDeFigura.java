@@ -19,27 +19,29 @@ public class ManejoDeFigura {
         
         //Circulo
         for(Figura figura: lista){
-            if(figura instanceof Circulo){
+            if(figura.getClass() == Circulo.class){
                 area += figura.retornarArea();
                 perimetro += figura.retornarPerimetro();
             }
         }
         figura_geometrica = "<- Circulo -> \n Areas: " + area + "\n Perimetros: " + perimetro;
         retornar.add(figura_geometrica);
+        area = 0; perimetro = 0;
         
         //Rectangulo
         for(Figura figura: lista){
-            if(figura instanceof Rectangulo){
+            if(figura.getClass() == Rectangulo.class){
                 area += figura.retornarArea();
                 perimetro += figura.retornarPerimetro();
             }
         }
         figura_geometrica = "<- Rectangulo -> \n Areas: " + area + "\n Perimetros: " + perimetro;
         retornar.add(figura_geometrica);
-        
+        area = 0; perimetro = 0;
+
         //Triangulo
         for(Figura figura: lista){
-            if(figura instanceof Triangulo){
+            if(figura.getClass() == Triangulo.class){
                 area += figura.retornarArea();
                 perimetro += figura.retornarPerimetro();
             }

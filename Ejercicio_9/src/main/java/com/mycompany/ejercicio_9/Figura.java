@@ -3,12 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.ejercicio_9;
-import java.*;
 /**
  *
  * @author Gary
  */
-public class Figura {
+public abstract class Figura {
     protected String Color;
     protected int x, y;
     protected double angulo;
