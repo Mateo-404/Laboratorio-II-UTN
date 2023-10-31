@@ -43,10 +43,6 @@
 
 package com.mycompany.ejercicio_9;
 
-/**
- *
- * @author Gary
- */
 public class Ejercicio_9 {
 
     public static void main(String[] args) {
