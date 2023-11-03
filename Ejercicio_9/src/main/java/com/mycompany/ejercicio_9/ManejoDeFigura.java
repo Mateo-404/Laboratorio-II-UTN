@@ -26,7 +26,7 @@ public class ManejoDeFigura {
         }
         figura_geometrica = "<- Circulo -> \n Areas: " + area + "\n Perimetros: " + perimetro;
         retornar.add(figura_geometrica);
-        area = 0; perimetro = 0;
+        area = perimetro = 0;
         
         //Rectangulo
         for(Figura figura: lista){
@@ -37,7 +37,7 @@ public class ManejoDeFigura {
         }
         figura_geometrica = "<- Rectangulo -> \n Areas: " + area + "\n Perimetros: " + perimetro;
         retornar.add(figura_geometrica);
-        area = 0; perimetro = 0;
+        area = perimetro = 0;
 
         //Triangulo
         for(Figura figura: lista){
